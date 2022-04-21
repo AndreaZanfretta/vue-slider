@@ -4,6 +4,7 @@ const app = new Vue({
         activeIndex: 0,
         filter: "filter",
         border: "border",
+        fade: "fade",
         timer: null,
         carousel: [
             {
@@ -36,13 +37,26 @@ const app = new Vue({
     },
     methods: {
         next(){
+            this.fade = '';
             this.activeIndex >= 4 ? this.activeIndex = 0 : this.activeIndex++;
+            setTimeout(()=>{
+                this.fade = "fade";
+            }, 1)
+            
         },
         prev(){
+            this.fade = '';
             this.activeIndex <= 0 ? this.activeIndex = 4 : this.activeIndex--;
+            setTimeout(()=>{
+                this.fade = "fade";
+            }, 1)
         },
         clickImgIndex(index){
+            this.fade = '';
             this.activeIndex = index;
+            setTimeout(()=>{
+                this.fade = "fade";
+            }, 1)
         },
         autoScroll(){
             this.timer = setInterval(()=>{
@@ -53,6 +67,7 @@ const app = new Vue({
             clearInterval(this.timer);
             this.timer = null;
         }
+        
 
     },
     mounted() {

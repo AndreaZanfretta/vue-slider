@@ -16,14 +16,14 @@
             <i id="down" @click="next" class="fa-solid fa-angle-down"></i>
             <div class="main-sect">
                 <div class="main show">
-                    <img :class="activeIndex === activeIndex ? 'fade' : ''" :src="carousel[activeIndex].image" :alt="carousel[activeIndex].title">
+                    <img :class="fade" class="fadeHidden" :src="carousel[activeIndex].image" :alt="carousel[activeIndex].title">
                     <h3>{{carousel[activeIndex].title}}</h3>
                     <p>{{carousel[activeIndex].subtitle}}</p>
                 </div> 
             </div>
             <div class="side-sect">
                 <div v-for="(side,index) in carousel" class="side">
-                    <img @click="clickImgIndex(index)" :class="activeIndex === index ? 'border' : filter" class="img" :src="side.image" :alt="side.title">
+                    <img @click="clickImgIndex(index)" :class="activeIndex === index ? 'border' : 'filter'" class="img" :src="side.image" :alt="side.title">
                 </div>  
             </div>
                 <button @click="stopAutoScroll" id="btn">Stop</button>
