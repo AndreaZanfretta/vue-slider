@@ -41,8 +41,8 @@ const app = new Vue({
         prev(){
             this.activeIndex <= 0 ? this.activeIndex = 4 : this.activeIndex--;
         },
-        clickImgindex(){
-            console.log(this.activeIndex)
+        clickImgIndex(index){
+            this.activeIndex = index;
         },
         autoScroll(){
             this.timer = setInterval(()=>{

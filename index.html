@@ -23,7 +23,7 @@
             </div>
             <div class="side-sect">
                 <div v-for="(side,index) in carousel" class="side">
-                    <img @click="clickImg()" :class="activeIndex === index ? 'border' : filter" class="img" :src="side.image" :alt="side.title">
+                    <img @click="clickImgIndex(index)" :class="activeIndex === index ? 'border' : filter" class="img" :src="side.image" :alt="side.title">
                 </div>  
             </div>
                 <button @click="stopAutoScroll" id="btn">Stop</button>
