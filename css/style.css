@@ -106,15 +106,11 @@
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
-
-.fadeHidden {
-    opacity: 1;
-    transition: all 1s;
 }
+  
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
 

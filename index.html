@@ -16,7 +16,7 @@
             <i id="down" @click="next" class="fa-solid fa-angle-down"></i>
             <div class="main-sect">
                 <div class="main show">
-                    <img :class="fade" class="fadeHidden" :src="carousel[activeIndex].image" :alt="carousel[activeIndex].title">
+                    <img :class="fade" :src="carousel[activeIndex].image" :alt="carousel[activeIndex].title">
                     <h3>{{carousel[activeIndex].title}}</h3>
                     <p>{{carousel[activeIndex].subtitle}}</p>
                 </div> 
